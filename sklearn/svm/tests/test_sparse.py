@@ -1,4 +1,5 @@
 import pytest
+import warnings
 
 import numpy as np
 from numpy.testing import (assert_array_almost_equal, assert_array_equal,
@@ -15,9 +16,16 @@ from sklearn.utils.testing import (assert_raises, assert_true, assert_false,
                                    ignore_warnings, skip_if_32bit)
 
 
+def my_sp_matrix(X):
+    with warnings.catch_warnings():
+        warnings.filterwarnings('ignore', message='the matrix '
+                                'subclass is not the recommended way')
+        return sparse.lil_matrix(X)
+
+
 # test sample 1
 X = np.array([[-2, -1], [-1, -1], [-1, -2], [1, 1], [1, 2], [2, 1]])
-X_sp = sparse.lil_matrix(X)
+X_sp = my_sp_matrix(X)
 Y = [1, 1, 1, 2, 2, 2]
 T = np.array([[-1, -1], [2, 2], [3, 2]])
 true_result = [1, 2, 2]
