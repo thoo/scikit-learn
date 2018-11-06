@@ -1386,7 +1386,7 @@ li#other-versions {
 
 
 span.copybutton {
-    text-size: 150%;
+    font-size: 13px !important;
     font-weight: bold !important;
     font-family: monospace;
     border-color: transparent !important;
@@ -1400,7 +1400,7 @@ a.copybtn {
     background: transparent no-repeat none !important;
     border: none;
     position: absolute;
-    top: 2px !important;
+    top: 4px !important;
     right: 2px !important;
     margin: 0.5px !important;
     width: 1em;
