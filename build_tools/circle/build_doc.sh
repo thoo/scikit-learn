@@ -123,7 +123,7 @@ conda create -n $CONDA_ENV_NAME --yes --quiet python="${PYTHON_VERSION:-*}" \
   scikit-image="${SCIKIT_IMAGE_VERSION:-*}" pandas="${PANDAS_VERSION:-*}"
 
 source activate testenv
-pip install sphinx-gallery
+pip install sphinx-gallery sphinx-copybutton
 pip install numpydoc==0.8
 
 # Build and install scikit-learn in dev mode
