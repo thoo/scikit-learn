@@ -1410,14 +1410,23 @@ a.copybtn {
     text-shadow: none !important;
     }
 
+
+.o-tooltip--left:hover:after {
+    top: -4px !important;
+    left: 115% !important;
+    z-index: 100 !important;
+    transform: translateX(0%) translateY(0) !important;
+}
+
 .o-tooltip--left:after {
     text-shadow: none !important;
     opacity: 0;
     font-family: monospace !important;
     font-weight: bold;
-    font-size: 12px !important;
+    font-size: 13px !important;
     background: #3F556B !important;
-    top: -16px !important;
-    left: 60px !important;
+    top: -4px !important;
+    left: 115% !important;
     z-index: 100 !important;
+    transform: translateX(10%) translateY(0) !important;
 }
